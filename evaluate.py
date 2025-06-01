@@ -69,7 +69,7 @@ def save_results_to_json(index, image_path, object_results, avg_score, output_di
 
 def main():
     parser = argparse.ArgumentParser(description="Evaluate final images.")
-    parser.add_argument('--method', type=str, default="plan4gen_3", help="Method")
+    parser.add_argument('--method', type=str, default="plan2gen_3", help="Method")
     parser.add_argument('--eval_folder', type=str, default="./eval", help="Path to the eval folder")
     parser.add_argument(
         '--object_file',

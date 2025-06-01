@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ## 📈 Evaluation: Assessing Final Image Quality
 ```bash
 python evaluate.py \
-  --method "plan4gen" \
+  --method "plan2gen" \
   --eval_folder "./eval" \
   --object_file "data/instruction.jsonl" \
   --evaluator "gemini-2.0-flash" \
@@ -61,13 +61,13 @@ Example entry:
 
 ### 📊 Hyperparameters Explanation
 
-| Hyperparameter      | Type         | Description                                                                                           | Default Value                        |
-|---------------------|--------------|--------------------------------------------------------------------------------------------------------|--------------------------------------|
-| `--method`          | `str`        | Name of the image generation method. Determines the subdirectory under `./outputs/` to evaluate.      | `"plan4gen_3"`                       |
-| `--eval_folder`     | `str`        | Directory to save evaluation output results (`.jsonl` format).                                         | `"./eval"`                           |
-| `--object_file`     | `str`        | Path to the input `.jsonl` file containing object instruction labels.                                  | `"data/instruction.jsonl"`           |
-| `--evaluator`       | `str`        | Evaluation model to use. Choices: `"gemini-2.0-flash"`, `"OpenGVLab/InternVL3-78B"`.                   | `"gemini-2.0-flash"`                 |
-| `--Gemni_API_Key`   | `List[str]`  | API key(s) for accessing Gemini models. Multiple keys supported for rotation.                          | **Required** (for Gemini)            |
+| Hyperparameter      | Type         | Description                                                                                           | Default Value              |
+|---------------------|--------------|--------------------------------------------------------------------------------------------------------|----------------------------|
+| `--method`          | `str`        | Name of the image generation method. Determines the subdirectory under `./outputs/` to evaluate.      | `"plan2gen_3"`             |
+| `--eval_folder`     | `str`        | Directory to save evaluation output results (`.jsonl` format).                                         | `"./eval"`                 |
+| `--object_file`     | `str`        | Path to the input `.jsonl` file containing object instruction labels.                                  | `"data/instruction.jsonl"` |
+| `--evaluator`       | `str`        | Evaluation model to use. Choices: `"gemini-2.0-flash"`, `"OpenGVLab/InternVL3-78B"`.                   | `"gemini-2.0-flash"`       |
+| `--Gemni_API_Key`   | `List[str]`  | API key(s) for accessing Gemini models. Multiple keys supported for rotation.                          | **Required** (for Gemini)  |
 
 
 ### 🎯 Case Study Comparison
@@ -76,7 +76,7 @@ Example entry:
     <tr>
       <th style="width: 30%;"><b>Instruction</b></th>
       <th style="width: 35%;"><b>GPT-4o</b></th>
-      <th style="width: 35%;"><b>Plan4gen (Ours)</b></th>
+      <th style="width: 35%;"><b>Plan2gen (Ours)</b></th>
     </tr>
   </thead>
   <tbody>
