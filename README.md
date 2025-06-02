@@ -1,4 +1,24 @@
-# LongBench-T2I
+<h2 align="center"> <a href="https://arxiv.org/abs/2505.24787">Draw ALL Your Imagine: A Holistic Benchmark and Agent Framework for Complex Instruction-based Image Generation</a></h2>
+<div align="center">
+
+[![Paper](https://img.shields.io/badge/arXiv-2505.24787-b31b1b.svg)](https://arxiv.org/abs/2505.24787)
+![GitHub Repo stars](https://img.shields.io/github/stars/yczhou001/LongBench-T2I?style=social)
+
+</div>
+
+<h4 align="center">If you find our research helpful, please consider giving us a star ⭐ to support the latest updates.</h4>
+
+
+<p align="center">
+  <img src="./assets/images/LongBench-T2I.png" width="90%" alt="Draw ALL Your Imagine"/>
+</p>
+
+---
+
+## 🔥 News
+- `2025.05.31` 🎉🎉🎉 We source the **LongBench-T2I** dataset and evaluation code.
+- `2025.05.30` 🎉🎉🎉 We release the paper [Draw ALL Your Imagine](https://arxiv.org/abs/2505.24787) !
+---
 
 ## 📦 Installation
 
@@ -106,6 +126,20 @@ Example entry:
     </tr>
   </tbody>
 </table>
+
+## 📖 Citation
+If you find our work useful for your research, please kindly cite our paper as follows:
+```bibtex
+@misc{zhou2025drawimagineholisticbenchmark,
+      title={Draw ALL Your Imagine: A Holistic Benchmark and Agent Framework for Complex Instruction-based Image Generation}, 
+      author={Yucheng Zhou and Jiahao Yuan and Qianning Wang},
+      year={2025},
+      eprint={2505.24787},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2505.24787}, 
+}
+```
 
 ## 📄 License
 
