@@ -3,6 +3,7 @@
 
 [![Paper](https://img.shields.io/badge/arXiv-2505.24787-b31b1b.svg)](https://arxiv.org/abs/2505.24787)
 ![GitHub Repo stars](https://img.shields.io/github/stars/yczhou001/LongBench-T2I?style=social)
+[![Dataset](https://img.shields.io/badge/HuggingFace-Dataset-orange)](https://huggingface.co/datasets/YCZhou/LongBench-T2I)
 
 </div>
 
