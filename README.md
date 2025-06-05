@@ -130,14 +130,11 @@ Example entry:
 ## 📖 Citation
 If you find our work useful for your research, please kindly cite our paper as follows:
 ```bibtex
-@misc{zhou2025drawimagineholisticbenchmark,
-      title={Draw ALL Your Imagine: A Holistic Benchmark and Agent Framework for Complex Instruction-based Image Generation}, 
-      author={Yucheng Zhou and Jiahao Yuan and Qianning Wang},
-      year={2025},
-      eprint={2505.24787},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2505.24787}, 
+@article{zhou2025draw,
+  title={Draw ALL Your Imagine: A Holistic Benchmark and Agent Framework for Complex Instruction-based Image Generation},
+  author={Zhou, Yucheng and Yuan, Jiahao and Wang, Qianning},
+  journal={arXiv preprint arXiv:2505.24787},
+  year={2025}
 }
 ```
 
