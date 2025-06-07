@@ -17,8 +17,51 @@
 ---
 
 ## 🔥 News
-- `2025.05.31` 🎉🎉🎉 We source the **LongBench-T2I** dataset and evaluation code.
-- `2025.05.30` 🎉🎉🎉 We release the paper [Draw ALL Your Imagine](https://arxiv.org/abs/2505.24787) !
+- `Coming Soon` 🚧 We will release the **Plan2Gen** agent implementation, along with full code for analysis and ablation studies — enabling complete reproduction and future extensions of our framework. Stay tuned!
+- `2025.06.07` 🎉🎉🎉 To further advance AGI-level T2I, we’ve added a structured summary of [**key insights**](#-key-insights) to GitHub — including both in-paper highlights and new reflections.  
+  > 📄 Check more details in our paper: [Draw ALL Your Imagine](https://arxiv.org/abs/2505.24787)  
+  > 👉 Feel free to [open an issue to discuss with us](https://github.com/yczhou001/LongBench-T2I/issues/new)!
+- `2025.06.03` 🎉🎉🎉 The **LongBench-T2I** dataset is now available on Hugging Face📦 at [https://huggingface.co/YCZhou/LongBench-T2I](https://huggingface.co/YCZhou/LongBench-T2I). _Explore, evaluate, and build on top of it!_ 🤗
+```python
+from datasets import load_dataset
+
+# Login using e.g. `huggingface-cli login` to access this dataset
+ds = load_dataset("YCZhou/LongBench-T2I")
+```
+- `2025.05.31` 🎉🎉🎉 We open-sourced the **LongBench-T2I** dataset and evaluation toolkit on GitHub — now available for the community!  — Take the LongBench-T2I Challenge! 🔥
+- `2025.05.30` 🎉🎉🎉 We release the paper [Draw ALL Your Imagine](https://arxiv.org/abs/2505.24787) — a holistic benchmark and agent framework for complex instruction-based image generation. Please Check it out for more details! 🚀
+
+---
+
+## 📖 Citation
+If you find our work useful for your research, please kindly cite our paper as follows:
+```bibtex
+@article{zhou2025draw,
+  title={Draw ALL Your Imagine: A Holistic Benchmark and Agent Framework for Complex Instruction-based Image Generation},
+  author={Zhou, Yucheng and Yuan, Jiahao and Wang, Qianning},
+  journal={arXiv preprint arXiv:2505.24787},
+  year={2025}
+}
+```
+
+---
+
+## 📚 Overview
+
+> LongBench-T2I is a comprehensive benchmark and agent framework for evaluating and improving complex instruction-based text-to-image generation — pushing toward AGI-level capabilities in controllable visual synthesis.
+
+- [📦 Installation](#-installation)
+- [🗂️ Project Structure](#-project-structure)
+- [🛠️ How to Run](#-how-to-run)
+  - [📈 Evaluation: Assessing Final Image Quality](#-evaluation-assessing-final-image-quality)
+  - [📊 Hyperparameters Explanation](#-hyperparameters-explanation)
+- [🔍 Key Insights](#-key-insights)
+  - [🔍 Key Insight 1: Architecture Trade-offs — Diffusion vs AR](#key-insight-1-diffusion-based-vs-ar-based-models)
+  - [🔍 Key Insight 2: LLMs Unlock Richer Scene Understanding](#key-insight-2-text-encoder-based-vs-llm-framework-based-models)
+  - [🔍 Key Insight 3: Language Understanding ≠ Visual Quality](#key-insight-3-language-understanding--visual-quality)
+- [🎯 Case Study Comparison](#-case-study-comparison)
+- [📄 License](#-license)
+
 ---
 
 ## 📦 Installation
@@ -50,7 +93,7 @@ pip install -r requirements.txt
 
 ---
 ## 🛠️ How to Run
-## 📈 Evaluation: Assessing Final Image Quality
+### 📈 Evaluation: Assessing Final Image Quality
 ```bash
 python evaluate.py \
   --method "plan2gen" \
@@ -90,6 +133,31 @@ Example entry:
 | `--evaluator`       | `str`        | Evaluation model to use. Choices: `"gemini-2.0-flash"`, `"OpenGVLab/InternVL3-78B"`.                   | `"gemini-2.0-flash"`       |
 | `--Gemni_API_Key`   | `List[str]`  | API key(s) for accessing Gemini models. Multiple keys supported for rotation.                          | **Required** (for Gemini)  |
 
+## 🔍 Key Insights
+### Key Insight 1: Diffusion-based vs AR-based Models
+
+> AR-based models outperform diffusion-based models in complex instruction-following by offering better structure, coherence, and efficiency, while diffusion models still lead in visual detail and richness.
+
+<div align="center">
+  <img src="./assets/images/AR_vs_Diffusion.png" width="90%">
+</div>
+
+
+### Key Insight 2: Text Encoder-based vs LLM framework-based Models
+> LLM framework-based models significantly outperform text encoder-based models, especially in composition, text understanding, and background quality, confirming the advantage of LLM-guided planning in handling complex image generation prompts.
+
+<div align="center">
+  <img src="./assets/images/TextEnc_vs_LLM.png" width="90%">
+</div>
+
+
+### Key Insight 3: Language Understanding ≠ Visual Quality
+> Surprisingly, higher perplexity sometimes correlates with better image quality—especially in smaller models—revealing a disconnect between language understanding and visual generation.
+
+<div align="center">
+  <img src="./assets/images/Perplexity-relationship-Avg.png" width="90%">
+</div>
+
 
 ### 🎯 Case Study Comparison
 <table>
@@ -128,16 +196,6 @@ Example entry:
   </tbody>
 </table>
 
-## 📖 Citation
-If you find our work useful for your research, please kindly cite our paper as follows:
-```bibtex
-@article{zhou2025draw,
-  title={Draw ALL Your Imagine: A Holistic Benchmark and Agent Framework for Complex Instruction-based Image Generation},
-  author={Zhou, Yucheng and Yuan, Jiahao and Wang, Qianning},
-  journal={arXiv preprint arXiv:2505.24787},
-  year={2025}
-}
-```
 
 ## 📄 License
 
