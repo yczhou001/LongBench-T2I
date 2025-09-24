@@ -21,7 +21,7 @@
 - `2025.06.07` 🎉🎉🎉 To further advance AGI-level T2I, we’ve added a structured summary of [**key insights**](#-key-insights) to GitHub — including both in-paper highlights and new reflections.  
   > 📄 Check more details in our paper: [Draw ALL Your Imagine](https://arxiv.org/abs/2505.24787)  
   > 👉 Feel free to [open an issue to discuss with us](https://github.com/yczhou001/LongBench-T2I/issues/new)!
-- `2025.06.03` 🎉🎉🎉 The **LongBench-T2I** dataset is now available on Hugging Face📦 at [https://huggingface.co/YCZhou/LongBench-T2I](https://huggingface.co/YCZhou/LongBench-T2I). _Explore, evaluate, and build on top of it!_ 🤗
+- `2025.06.03` 🎉🎉🎉 The **LongBench-T2I** dataset is now available on Hugging Face📦 at [https://huggingface.co/datasets/YCZhou/LongBench-T2I](https://huggingface.co/datasets/YCZhou/LongBench-T2I). _Explore, evaluate, and build on top of it!_ 🤗
 ```python
 from datasets import load_dataset
 
